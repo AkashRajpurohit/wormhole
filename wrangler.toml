@@ -1,0 +1,7 @@
+name = "wormhole"
+main = "src/index.ts"
+compatibility_date = "2023-09-22"
+
+[vars]
+DOMAIN = "akashrajpurohit.com"
+FALLBACK_URL = "https://akashrajpurohit.com/blogs/"
