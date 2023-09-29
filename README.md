@@ -32,7 +32,7 @@ Wormhole is a URL redirection service that allows you to quickly share short, me
 
 My purpose of using this along with [time-to-go](https://github.com/AkashRajpurohit/time-to-go) is to extend blogs sharing capabilities without me needing to add each and every blog to the go-url service.
 
-So instead of going to [akashrajpurohit.com/blogs/](https://akashrajpurohit.com/blogs/) and then search for the blog there and then sharing the full length URL, I would be able to just share the URL using the bangs.
+So instead of going to [akashrajpurohit.com/blogs/](https://akashrajpurohit.com/blogs/) and then search for the blog there and then sharing the full length URL, I would be able to just share the URL using this service.
 
 Example - [https://q.akashrajpurohit.com/inhouse-newsletter](https://q.akashrajpurohit.com/inhouse-newsletter) will redirect user to [https://akashrajpurohit.com/blog/i-built-my-own-inhouse-newsletter-system/](https://akashrajpurohit.com/blog/i-built-my-own-inhouse-newsletter-system/)
 
