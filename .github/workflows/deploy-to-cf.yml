@@ -1,0 +1,35 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Checkout 🧳
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM ⚙️
+        uses: AkashRajpurohit/.github/.github/actions/setup-pnpm@main
+        with:
+          node_version: 18
+          pnpm_version: 7
+
+      - name: Install dependencies ⏬
+        run: pnpm install --no-frozen-lockfile
+
+      # Deploy
+      - name: Deploy 🚀
+        run: pnpm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
